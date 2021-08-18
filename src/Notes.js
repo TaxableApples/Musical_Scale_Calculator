@@ -14,7 +14,7 @@ function Notes({ root, scale }) {
 
   return (
     <div>
-      {scalenotes}
+      {scalenotes.join(' ')}
     </div>
   )
 }
