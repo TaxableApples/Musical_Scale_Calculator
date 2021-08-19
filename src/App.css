@@ -1,0 +1,66 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.whitekey {
+  width: 50px;
+  height: 120px;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  position: absolute;
+  color: #000;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(#eee, #fff 15%);
+  box-shadow: -1px 0 0 rgb(0 0 0 / 60%) inset, 0 0 3px #ccc inset,
+    0 0 3px rgb(0 0 0 / 20%);
+}
+
+.blackkey {
+  width: 30px;
+  height: 75px;
+  background-color: #222;
+  border: 1px solid gray;
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  border-radius: 0 0 2px 2px;
+  border-width: 0 6px 12px;
+  border-color: #000;
+  border-bottom-color: #424546;
+  background: linear-gradient(#151b19 25%, #171c1a);
+  box-shadow: 0 3px 5px #ccc, inset 0 0 0 1px #111;
+}
+
+.keylabel {
+  position: absolute;
+  bottom: 3px;
+  width: 100%;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #999, -1px 1px 0 #555,
+    1px 1px 0 #555;
+}
+
+.pianobox {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  position: relative;
+  height: 140px;
+  width: 351px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
+
+.piano {
+  position: absolute;
+}

@@ -28,11 +28,11 @@ function Options() {
   // const [state, setState] = useState({
   //   root:'C',
   //   scale:'Major'
-  // }) 
+  // })
   //const config = (event, state) => {
   //
-  //} 
-  
+  //}
+
   const changeRoot = (event) => {
     setRoot(event.target.value);
   };
@@ -77,7 +77,7 @@ function Options() {
           <MenuItem value={"Minor"}>Minor</MenuItem>
         </Select>
       </FormControl>
-      <Notes root={root} scale={scale}/>
+      <Notes root={root} scale={scale} />
     </div>
   );
 }

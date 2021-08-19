@@ -1,12 +1,13 @@
 import React from "react";
 import { notes, scales } from "./Data";
+import Piano from "./Piano";
 
 function Notes({ root, scale }) {
-  const scalenotes = [];
+  let scalenotes = [];
   let selectedScale = scales[scale];
-  let note =0;
+  let note = 0;
 
-  for (const i of selectedScale) {
+  for (let i of selectedScale) {
     note = notes.indexOf(root) + i;
     note %= notes.length;
     scalenotes.push(notes[note]);
@@ -14,9 +15,9 @@ function Notes({ root, scale }) {
 
   return (
     <div>
-      {scalenotes.join(' ')}
+      <Piano scalenotes={scalenotes} />
     </div>
-  )
+  );
 }
 
 export default Notes;
