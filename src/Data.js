@@ -26,7 +26,9 @@ const noteStyles = [
 
 const scales = {
   Major: [0, 2, 4, 5, 7, 9, 11],
-  Minor: [0, 2, 3, 5, 7, 8, 10]
+  Minor: [0, 2, 3, 5, 7, 8, 10],
+  "Harmonic Minor": [0, 2, 3, 5, 7, 8, 11],
+  "Melodic Minor": [0, 2, 3, 5, 7, 9, 11]
 };
 
 export { notes, scales, pianokeys, pianolayout, noteStyles };

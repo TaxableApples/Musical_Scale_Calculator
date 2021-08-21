@@ -5,7 +5,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import { makeStyles } from "@material-ui/core/styles";
 
-import { notes } from "./Data";
+import { notes, scales } from "./Data";
 import Notes from "./Notes";
 
 const useStyles = makeStyles((theme) => ({
@@ -56,8 +56,13 @@ function Options() {
           label="Scale"
           id="select-scale"
         >
-          <MenuItem value={"Major"}>Major</MenuItem>
-          <MenuItem value={"Minor"}>Minor</MenuItem>
+          {Object.keys(scales).map((e, i) => (
+            <MenuItem key={e} value={e}>
+              {e}
+            </MenuItem>
+          ))}
+          {/* <MenuItem value={"Major"}>Major</MenuItem>
+          <MenuItem value={"Minor"}>Minor</MenuItem> */}
         </Select>
       </FormControl>
       <Notes root={root} scale={scale} />
