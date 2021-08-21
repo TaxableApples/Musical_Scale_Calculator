@@ -1,11 +1,12 @@
-import React from "react";
-import Options from "./Options";
 import "./App.css";
+import Options from "./Options";
 
-export default function App() {
+function App() {
   return (
     <div className="App">
       <Options />
     </div>
   );
 }
+
+export default App;

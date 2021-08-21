@@ -5,7 +5,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import { makeStyles } from "@material-ui/core/styles";
 
-//import { notes, scales} from "./Data";
+import { notes } from "./Data";
 import Notes from "./Notes";
 
 const useStyles = makeStyles((theme) => ({
@@ -20,18 +20,8 @@ const useStyles = makeStyles((theme) => ({
 
 function Options() {
   const classes = useStyles();
-
-  //Events
   const [root, setRoot] = useState("C");
   const [scale, setScale] = useState("Major");
-
-  // const [state, setState] = useState({
-  //   root:'C',
-  //   scale:'Major'
-  // })
-  //const config = (event, state) => {
-  //
-  //}
 
   const changeRoot = (event) => {
     setRoot(event.target.value);
@@ -51,18 +41,11 @@ function Options() {
           label="Root"
           id="select-root"
         >
-          <MenuItem value={"C"}>C</MenuItem>
-          <MenuItem value={"Db"}>Db</MenuItem>
-          <MenuItem value={"D"}>D</MenuItem>
-          <MenuItem value={"Eb"}>Eb</MenuItem>
-          <MenuItem value={"E"}>E</MenuItem>
-          <MenuItem value={"F"}>F</MenuItem>
-          <MenuItem value={"Gb"}>Gb</MenuItem>
-          <MenuItem value={"G"}>G</MenuItem>
-          <MenuItem value={"Ab"}>Ab</MenuItem>
-          <MenuItem value={"A"}>A</MenuItem>
-          <MenuItem value={"Bb"}>Bb</MenuItem>
-          <MenuItem value={"B"}>B</MenuItem>
+          {notes.map((e, i) => (
+            <MenuItem key={e + i} value={e}>
+              {e}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
       <FormControl variant="outlined" className={classes.formControl}>

@@ -15,7 +15,7 @@ function Notes({ root, scale }) {
 
   return (
     <div>
-      <Piano scalenotes={scalenotes} />
+      <Piano notes={scalenotes} root={root} />
     </div>
   );
 }
