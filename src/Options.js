@@ -61,8 +61,6 @@ function Options() {
               {e}
             </MenuItem>
           ))}
-          {/* <MenuItem value={"Major"}>Major</MenuItem>
-          <MenuItem value={"Minor"}>Minor</MenuItem> */}
         </Select>
       </FormControl>
       <Notes root={root} scale={scale} />
